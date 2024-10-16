@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html
+        translate="no"
+        data-dpr="1"
+        style="font-size: 48.16px"
+        style="min-height: 100vh"
+>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+            name="viewport"
+    />
+    <title>KIKI79</title>
+    <link href="/css/member/main.css" rel="stylesheet" />
+    <link href="/css/member/chunk-1.css" rel="stylesheet" />
+    <link href="/css/member/chunk-2.css" rel="stylesheet" />
+    <link href="/css/member/chunk-3.css" rel="stylesheet" />
+    <link href="/css/member/chunk-4.css" rel="stylesheet" />
+    <link href="/css/member/chunk-5.css" rel="stylesheet" />
+    <link href="/css/member/chunk-6.css" rel="stylesheet" />
+    <link href="/css/member/chunk-7.css" rel="stylesheet" />
+    <link
+            rel="shortcut icon"
+            href="/images/bitbug_favicon.ico"
+            type="image/x-icon"
+    />
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #9195a3;
+            padding: 0;
+            margin: 0;
+        }
+        .block-click {
+            pointer-events: none;
+        }
+        .mian .menu-box .info-recharge[data-v-8cd483ca] {
+            background: none;
+            height: 2.8rem;
+            margin: 5px .4rem .4rem;
+        }
+
+        .mian.page[data-v-8cd483ca] {
+             padding-bottom: 0;
+        }
+
+        .mian .money-recharge .status-select-container[data-v-106b99c8] {
+            border-radius: 5px;
+            border-color: #fff;
+            box-shadow: 0 4px 10px #0000004d;
+            width: 48%;
+        }
+        .mian .money-recharge .ipt[data-v-106b99c8] {
+            border-radius: 5px;
+            box-shadow: 0 4px 10px #0000004d;
+            width: 100%;
+            height:50px;
+            border: none;
+        }
+
+
+        .mian .money-recharge .btn.filter[data-v-106b99c8] {
+            width: 90%;
+            color: #fff;
+            padding: 3px;
+            border: none;
+            background-image: linear-gradient(90deg, #d71212, #ff5851);
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .mian .money-recharge .btn.refresh[data-v-106b99c8] {
+            color: #fff;
+            padding: 3px;
+            border: none;
+            background-color: #2b2b2b;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .mian .info-recharge[data-v-106b99c8] {
+            border-radius: 5px;
+            box-shadow: 0 4px 10px #0000004d;
+            width: 100%;
+            border: none;
+            /*margin-top: 15px;*/
+            margin: 5px .4rem .4rem;
+        }
+        .mian .box-recharge[data-v-106b99c8] {
+            border-radius: 5px;
+            box-shadow: 0 4px 10px #0000004d;
+            margin: 5px .4rem 5px;
+        }
+
+        .mian .box-recharge .title-box[data-v-106b99c8] {
+            border: none;
+            margin: 5px .4rem .4rem;
+        }
+        .mian .box-recharge .box[data-v-106b99c8] {
+            border: none;
+            margin: 5px .4rem 5px;
+        }
+
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+
+        .menu-box .page-nav .arr[data-v-106b99c8] {
+            height: 1.06667rem;
+            width: 1.06667rem;
+            background-color: #d8d8d8;
+            border-radius: .13333rem;
+        }
+
+        .menu-box .page-nav .arr.action[data-v-106b99c8] {
+            background-color: #fb4e4e;
+            color: #fff;
+        }
+
+        .menu-box .page-nav .number[data-v-106b99c8] {
+            width: 2.66667rem;
+            height: 1.06667rem;
+            line-height: 1.06667rem;
+            background-color: #f6f7f8;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div data-v-8cd483ca="" class="mian page">
+        <div data-v-106b99c8="" data-v-25d9c352="" class="c-row navbar">
+            <div
+                    data-v-106b99c8=""
+                    class="navbar-left"
+                    onclick="location.href='/mian'"
+            >
+                <div
+                        data-v-25d9c352=""
+                        data-v-106b99c8=""
+                        class="c-row c-row-middle-center"
+                >
+                    <img
+                            data-v-25d9c352=""
+                            data-v-106b99c8=""
+                            src="/images/back.c3244ab0.png"
+                            class="navbar-back"
+                    />
+                </div>
+            </div>
+            <div data-v-106b99c8="" class="navbar-title">Lịch sử nạp tiền</div>
+            <div data-v-106b99c8="" class="navbar-right"></div>
+        </div>
+        <div data-v-8cd483ca="" class="menu-box">
+            <div data-v-8cd483ca="" class="info-recharge">
+                <div data-v-106b99c8="" class="money-recharge">
+                    <div data-v-106b99c8="" class="c-row">
+                        <select data-v-106b99c8="" name="pets" id="status-select" class="status-select-container" style="height: 50px;margin-right: 10px">
+                            <option value="all" >Toàn bộ</option>
+                            <option value="0">Chờ xác nhận</option>
+                            <option value="1">Đã thanh toán</option>
+                            <option value="2">Nạp tiền thất bại</option>
+
+                        </select>
+                        <div class="input-container" style="height: 53px;width: 174px">
+                            <input
+                                    data-v-106b99c8=""
+                                    style="padding-left: 10px"
+                                    type="date"
+                                    placeholder="Chọn ngày"
+                                    class="ipt"
+                                    id="dateInput"
+                            />
+                        </div>
+                    </div>
+                    <div data-v-106b99c8="" class="c-row" style="margin-top: 10px">
+                        <button data-v-106b99c8="" class="btn filter c-row c-row-middle c-row-middle-center "><img src="/images/IconSearchGray.png" style="width: 20px;height: 20px"/>Lọc</button>
+                        <button data-v-106b99c8="" class="btn refresh"><img src="/images/reload.png" style="width: 20px;height: 20px"/></button>
+                    </div>
+                </div>
+            </div>
+            <div data-v-106b99c8="" id="info-recharge" style="height: 670px;overflow: auto">
+
+            </div>
+            <div data-v-106b99c8="" class="page-nav c-row c-row-center c-tc" style="margin-top: 10px">
+                <div data-v-106b99c8="" class="arr c-row c-row-middle-center">
+                    <i data-v-106b99c8="" class="van-icon van-icon-arrow-left icon" style="font-size: 20px">
+                        <!---->
+                    </i>
+                </div>
+                <div data-v-106b99c8="" class="number">1/1</div>
+                <div data-v-106b99c8="" class="arr c-row c-row-middle-center action">
+                    <i data-v-106b99c8="" class="van-icon van-icon-arrow icon action" style="font-size: 20px">
+                        <!---->
+                    </i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/vn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/client.js"></script>
+    <!---->
+    <script>
+
+        window.onload = function () {
+            $(".Loading").fadeOut(10);
+        };
+        const currentDate = new Date();
+        const day = String(currentDate.getDate()).padStart(2, "0");
+        const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+        const year = currentDate.getFullYear();
+        const formattedDefaultDate = `${day}-${month}-${year}`;
+        document.getElementById("dateInput").value = formattedDefaultDate;
+        flatpickr("#dateInput", {
+            dateFormat: "d-m-Y",
+            altFormat: "d-m-Y",
+            locale: "vn",
+            weekNumbers: true,
+            defaultDate: formattedDefaultDate,
+        });
+        let selectedValue = 'all'; // Biến được định nghĩa ở phạm vi toàn cục
+        let selectedDate = $('#dateInput').val();;
+
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(";");
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function unsetCookie() {
+            setCookie("token", "", 0);
+            setCookie("auth", "", 0);
+            var checkToken = getCookie("token");
+            var checkAuth = getCookie("auth");
+            if (!checkToken && !checkAuth) {
+                location.href = "/login";
+            } else {
+                setCookie("token", "", 0);
+                setCookie("auth", "", 0);
+                location.href = "/login";
+            }
+        }
+
+        $("#status-select").change(function() {
+            selectedValue = $(this).val(); // Gán giá trị của $(this).val() cho selectedValue
+        });
+
+        // Thêm sự kiện cho #dateInput
+        $("#dateInput").change(function() {
+            selectedDate = $(this).val(); // Loại bỏ từ khóa var
+        });
+        $("#dateInput").on("change", function() {
+            selectedDate = $(this).val();
+        });
+
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/recharge/getRechargeHistoryByDate",
+            data: {
+                typeid: selectedValue,
+                selectedDate: selectedDate,
+                pageno: "0",
+                limit: "10",
+                language: "vi",
+            },
+            dataType: "json",
+            success: function (response) {
+                let data = response.data;
+                console.log('data',response)
+                $(".menu-box .page-nav .number").text("1/" + response.page_total);
+                showListMoney(data);
+            },
+        });
+
+        $(".money-recharge .filter").click(function (e) {
+            e.preventDefault();
+            if (selectedDate == undefined) {
+                selectedDate = $('#dateInput').val();
+            }
+            if (selectedValue == undefined) {
+                selectedValue = "all"
+            }
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/recharge/getRechargeHistoryByDate",
+                data: {
+                    typeid: selectedValue,
+                    selectedDate: selectedDate,
+                    pageno: "0",
+                    limit: "10",
+                    language: "vi",
+                },
+                dataType: "json",
+                success: function (response) {
+                    let data = response.data;
+                    console.log('data',response)
+                    $(".menu-box .page-nav .number").text("1/" + response.page_total);
+                    showListMoney(data);
+                },
+            });
+        });
+
+        function alertMessJoin(msg) {
+            if (msg == undefined) {
+                msg = 'Không còn dữ liệu'
+            }
+            $("body").append(
+                `
+                <div data-v-1dcba851="" class="msg">
+                    <div data-v-1dcba851="" class="msg-content v-enter-active v-enter-to" style=""> ${msg} </div>
+                </div>
+                `
+            );
+            setTimeout(() => {
+                $(".msg .msg-content").removeClass("v-enter-active v-enter-to");
+                $(".msg .msg-content").addClass("v-leave-active v-leave-to");
+                setTimeout(() => {
+                    $("body .msg").remove();
+                }, 500);
+            }, 1000);
+        }
+
+
+        var pageno = 1;
+        var limit = 10;
+        var page = 1;
+        $(".menu-box .page-nav .arr:eq(1)").click(function (e) {
+            e.preventDefault();
+            pageno += 1;
+            let pageto = limit;
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/recharge/getRechargeHistoryByDate",
+                data: {
+                    typeid: selectedValue,
+                    selectedDate: selectedDate,
+                    pageno: pageno,
+                    limit: pageto,
+                    language: "vi",
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (pageno > response.page_total) {
+                        $(".menu-box .page-nav .arr:eq(1)").addClass(
+                            "block-click"
+                        );
+                        $(".menu-box .page-nav .arr:eq(1)").removeClass(
+                            "action"
+                        );
+                        $(".menu-box .page-nav .van-icon-arrow").css(
+                            "color",
+                            "#fff"
+                        );
+                        alertMessJoin(response.msg);
+                        pageno -=1
+                        return false;
+                    }
+                    $(".menu-box .page-nav .arr:eq(0)").removeClass(
+                        "block-click"
+                    );
+                    $(".menu-box .page-nav .arr:eq(0)").addClass("action");
+                    $(".menu-box .page-nav .van-icon-arrow-left").css(
+                        "color",
+                        "#fff"
+                    );
+                    page += 1;
+                    $(".menu-box .page-nav .number").text( page + "/" + response.page_total);
+                    let list_orders = response.data;
+                    showListMoney(list_orders);
+                },
+            });
+        });
+        $(".menu-box .page-nav .arr:eq(0)").click(function (e) {
+            e.preventDefault();
+            $(".menu-box  .page-nav .arr:eq(1)").removeClass(
+                "block-click"
+            );
+            $(".menu-box .page-nav .arr:eq(1)").addClass("action");
+            $(".menu-box .page-nav .van-icon-arrow-right").css(
+                "color",
+                "#fff"
+            );
+            pageno -= 1;
+            let pageto = limit;
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/recharge/getRechargeHistoryByDate",
+                data: {
+                    typeid: selectedValue,
+                    selectedDate: selectedDate,
+                    pageno: pageno,
+                    limit: pageto,
+                    language: "vi",
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (page - 1 <= 1) {
+                        $(".menu-box  .page-nav .arr:eq(0)").addClass(
+                            "block-click"
+                        );
+                        $(".menu-box  .page-nav .arr:eq(0)").removeClass(
+                            "action"
+                        );
+                        $(".menu-box  .page-nav .van-icon-arrow-left").css(
+                            "color",
+                            "#7f7f7f"
+                        );
+                    }
+                    if (response.status === false) {
+                        pageno = 1;
+                        $(".menu-box .page-nav .arr:eq(0)").addClass(
+                            "block-click"
+                        );
+                        $(".menu-box .page-nav .arr:eq(0)").removeClass(
+                            "action"
+                        );
+                        $(".menu-box .page-nav .van-icon-arrow-left").css(
+                            "color",
+                            "#7f7f7f"
+                        );
+                        alertMessJoin(response.msg);
+                        return false;
+                    }
+                    page -= 1;
+                    $(".menu-box .page-nav .number").text( page + "/" + response.page_total);
+                    let list_orders = response.data;
+                    // $(".time-box .info .number").text(response.period);
+                    showListMoney(list_orders);
+                },
+            });
+        });
+        $(".refresh").click(function (e) {
+            e.preventDefault();
+            location.reload();
+        });
+
+        function showListMoney(list_order){
+            if (list_order.length == 0) {
+                return $(`.menu-box #info-recharge`).html(
+                    `
+                    <div data-v-a9660e98="" class="van-empty">
+                        <div class="van-empty__image">
+                            <img src="/images/empty-image-default.png" />
+                        </div>
+                        <p class="van-empty__description">Không có dữ liệu</p>
+                    </div>
+                    `
+                );
+
+            }
+            let htmls = "";
+            let result = list_order.map((list_order) => {
+
+
+                return (htmls +=`
+                <div data-v-106b99c8="" class="box-recharge" >
+                    <div data-v-106b99c8="" class="title-box c-row c-row-middle c-row-between" style=" padding-top: 10px;padding-bottom: 10px; border-bottom: 1px solid #bcbfd7;">
+                        <div data-v-106b99c8="" style="padding: 5px 10px;color: #fff; background-color: #34bd89">
+                            ${list_order.detail}
+                        </div>
+                        <div data-v-106b99c8="" style="margin-right: 10px" class="${
+                                                                                list_order.status == 0
+                                                                                    ? "black"
+                                                                                    : list_order.status == 1
+                                                                                        ? "green"
+                                                                                        : list_order.status == 2
+                                                                                            ? "red"
+                                                                                            : "" }" > ${
+                                                                                list_order.status == 0
+                                                                                    ? "Chờ xác nhận"
+                                                                                    : list_order.status == 1
+                                                                                        ? "Đã thanh toán"
+                                                                                        : list_order.status == 2
+                                                                                            ? "Nạp tiền thất bại"
+                                                                                            : "" }
+                        </div>
+                    </div>
+                    <div data-v-106b99c8="" class="box c-row c-row-middle c-row-between" style=" padding-top: 10px;padding-bottom: 2px;">
+                        <div data-v-106b99c8="" style="color: #34bd89">
+                            Số tiền
+                        </div>
+                        <div data-v-106b99c8="" style="margin-right: 10px">${list_order.money}</div>
+                    </div>
+                    <div data-v-106b99c8="" class="box c-row c-row-middle c-row-between" style=" padding-top: 10px;padding-bottom: 2px;">
+                        <div data-v-106b99c8="" style="color: #34bd89">
+                            Kiểu
+                        </div>
+                        <div data-v-106b99c8="" style="margin-right: 10px"> ${list_order.type}</div>
+                    </div>
+                    <div data-v-106b99c8="" class="box c-row c-row-middle c-row-between" style=" padding-top: 10px;padding-bottom: 2px;">
+                        <div data-v-106b99c8="" style="color: #34bd89">
+                            Thời gian
+                        </div>
+                        <div data-v-106b99c8="" style="margin-right: 10px"> ${list_order.timestamp}</div>
+                    </div>
+                    <div data-v-106b99c8="" class="box c-row c-row-middle c-row-between" style=" padding-top: 10px;padding-bottom: 10px;">
+                        <div data-v-106b99c8="" style="color: #34bd89">
+                            Mã giao dịch
+                        </div>
+                        <div data-v-106b99c8="" class="itemUID c-row c-row-between" >
+                            <div data-v-106b99c8="" class="orderUID" style="margin-right: 10px">${list_order.id_order}</div>
+                            <div data-v-67caa467="">
+                                <div
+                                        data-v-67caa467=""
+                                        class="tag-read van-image"
+                                        data-clipboard-text="03/07/2022"
+                                        style="width: 22px; height: 20px"
+                                >
+                                    <img src="/images/copy.png" class="van-image__img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`);
+            });
+
+            $(`.menu-box #info-recharge`).html(htmls);
+        }
+        function formateT(params) {
+            let result = params < 10 ? "0" + params : params;
+            return result;
+        }
+
+        function timerJoin(params = "") {
+            let date = "";
+            if (params) {
+                date = new Date(Number(params));
+            } else {
+                date = new Date();
+            }
+            let years = formateT(date.getFullYear());
+            let months = formateT(date.getMonth() + 1);
+            let days = formateT(date.getDate());
+
+            let hours = formateT(date.getHours());
+            let minutes = formateT(date.getMinutes());
+            let seconds = formateT(date.getSeconds());
+            return (
+                years +
+                "-" +
+                months +
+                "-" +
+                days +
+                " " +
+                hours +
+                ":" +
+                minutes +
+                ":" +
+                seconds
+            );
+        }
+
+
+        $(".box-recharge .itemUID").click(function (e) {
+            let text = $(this).find(".orderUID").text().trim();
+            navigator.clipboard.writeText(text);
+            $(this).addClass("block-click");
+            alertMess("Sao chép thành công", $(this));
+        });
+        function alertMess(text, sic) {
+            $("body").append(
+                `
+                <div data-v-1dcba851="" class="msg">
+                    <div data-v-1dcba851="" class="msg-content v-enter-active v-enter-to" style=""> ${text} </div>
+                </div>
+                `
+            );
+            setTimeout(() => {
+                $(".msg .msg-content").removeClass("v-enter-active v-enter-to");
+                $(".msg .msg-content").addClass("v-leave-active v-leave-to");
+                setTimeout(() => {
+                    $(".msg").remove();
+                }, 100);
+                sic.removeClass("block-click");
+            }, 1000);
+        }
+        $(".van-dialog__confirm").click(function (e) {
+            e.preventDefault();
+            unsetCookie();
+        });
+    </script>
+</body>
+</html>

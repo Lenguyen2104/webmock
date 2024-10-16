@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html
+  translate="no"
+  data-dpr="1"
+  style="font-size: 48.16px"
+  style="min-height: 100vh"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+      name="viewport"
+    />
+    <title>KIKI79</title>
+    <link href="/css/member/main.css" rel="stylesheet" />
+    <link href="/css/member/chunk-1.css" rel="stylesheet" />
+    <link href="/css/member/chunk-2.css" rel="stylesheet" />
+    <link href="/css/member/chunk-3.css" rel="stylesheet" />
+    <link href="/css/member/chunk-4.css" rel="stylesheet" />
+    <link href="/css/member/chunk-5.css" rel="stylesheet" />
+    <link href="/css/member/chunk-6.css" rel="stylesheet" />
+    <link href="/css/member/chunk-7.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="/images/bitbug_favicon.ico"
+      type="image/x-icon"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background-color: #9195a3;
+        padding: 0;
+        margin: 0;
+      }
+      .block-click {
+        pointer-events: none;
+      }
+      .bet-history {
+        width: 170px;
+        height: 60px;
+        box-shadow: 0 4px 10px #0000004d;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding-left: 5px;
+      }
+
+      .mian {
+        padding-top: 0px;
+      }
+      .mian .menu-box .total-box[data-v-8cd483ca] {
+
+        box-shadow: 0 4px 10px #0000004d;
+      }
+      .mian .menu-box .info[data-v-8cd483ca] {
+        margin-top: -12px;
+        border-radius: 0.4rem;
+      }
+      .mian .menu-box .bet-money[data-v-8cd483ca] {
+        margin: 0.53333rem .4rem 5px;
+      }
+      .mian .menu-box .bet-money .bet-history .txt-history[data-v-8cd483ca] {
+        font-size: 11px;
+        color: #2b2b2b;
+      }
+      .mian .menu-box .list-info[data-v-8cd483ca] {
+        box-shadow: 0 4px 10px #0000004d;
+        margin: 0px .4rem .4rem;
+        border-radius: .4rem;
+
+      }
+      .mian .menu-box .support[data-v-8cd483ca] {
+        box-shadow: 0 4px 10px #0000004d;
+        margin: 0.53333rem .4rem .4rem;
+        border-radius: .4rem;
+        font-size: 14px;
+      }
+      .mian .menu-box .support .li[data-v-8cd483ca] {
+        padding-top: 8px;
+        text-align: center;
+      }
+
+      .list .item[data-v-8cd483ca] {
+        padding: 0 .66667rem;
+        height: 30px;
+        line-height: 0.33333rem;
+        font-size: 14px;
+        color: #000;
+        border-bottom: .02667rem solid #efeeee;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div data-v-8cd483ca="" class="mian page">
+        <div data-v-8cd483ca="" class="menu-box">
+          <div data-v-8cd483ca="" class="info p-t-30 p-l-30 p-b-30 p-r-20">
+            <div
+              data-v-8cd483ca=""
+              class="c-row c-row-between c-row-middle state-box c-pr"
+            >
+              <div data-v-8cd483ca="" class="c-row c-row-middle">
+                <div data-v-8cd483ca="" class="user-img">
+                  <img
+                    data-v-8cd483ca=""
+                    src="/images/avatar.svg"
+                    class="img"
+                  />
+                </div>
+                <div data-v-8cd483ca="" class="p-l-10 infoName">
+                  <div
+                    data-v-8cd483ca=""
+                    class="name mb3 c-row c-row-middle"
+                  ></div>
+                  <div
+                    data-v-8cd483ca=""
+                    class="id tag-read mb3"
+                    data-clipboard-text="42472"
+                  ></div>
+                  <div data-v-8cd483ca="" class="number mb3"></div>
+                  <!---->
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div data-v-8cd483ca="" class="total-box">
+            <div data-v-8cd483ca="" class="infoItem">
+              <div data-v-8cd483ca="" class="c-row c-row-middle" style="padding-bottom: 5px">
+                <div data-v-8cd483ca="">
+                  <div data-v-8cd483ca="" class="des u-m-b-15">Tổng số tiền</div>
+                  <div
+                    data-v-8cd483ca=""
+                    class="c-row c-row-middle c-row-center p-t-5"
+                  >
+                    <div data-v-8cd483ca="" class="money">
+                      <div data-v-8cd483ca="">
+                        <!---->
+                        <span data-v-8cd483ca="" class="txt"> 0.00 ₫ </span>
+                      </div>
+                    </div>
+                    <div data-v-8cd483ca="" class="refresh">
+                      <img
+                        alt="loaderUser"
+                        width="15px"
+                        height="15px"
+                        src="/images/loaderUser.png"
+                        class="img m-l-10 reload_money"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-v-8cd483ca=""
+                class="c-row c-row-between infoBtn"
+                style="border-top: 1px solid #f4f4f4"
+              >
+                <div  data-v-8cd483ca="" class="m-t-10 m-l-10 c-row c-row-middle c-column c-column-between " onclick="location.href='/walletProfile'" >
+                  <img
+                          alt="wallet"
+                          src="/images/wallet2.png"
+                          style="width: 38px; height: 38px"
+                  />
+                  <div
+                          data-v-8cd483ca=""
+                          class="li"
+                  >
+                    Ví
+                  </div>
+                </div>
+                <div data-v-8cd483ca="" class="m-t-10 c-row c-row-middle c-column c-column-between" onclick="location.href='/wallet/recharge'" >
+                  <img
+                          alt="recharge"
+                          src="/images/recharge.png"
+                          style="width: 38px; height: 38px"
+                  />
+                  <div
+                          data-v-8cd483ca=""
+                          class="li"
+                  >
+                    Nạp tiền
+                  </div>
+                </div>
+                <div data-v-8cd483ca="" class="m-t-10 m-r-10 c-row c-row-middle c-column c-column-between" onclick="location.href='/wallet/withdrawal'" >
+                  <img
+                          alt="withDraw"
+                          src="/images/withdraw.png"
+                          style="width: 38px; height: 38px"
+                  />
+                  <div
+                          data-v-8cd483ca=""
+                          class="li"
+                  >
+                    Rút tiền
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!---->
+          <!-- <div data-v-8cd483ca="" class="nav-muen c-row p-r-15 p-l-15">
+                    <div data-v-8cd483ca="" class="item c-tc"><img data-v-8cd483ca="" width="45px" height="45px"
+                            src="/images/s6.png" class="img">
+                        <div data-v-8cd483ca="" class="name"> LỊCH SỬ CƯỢC </div>
+                    </div>
+                    <div data-v-8cd483ca="" class="item c-tc"><img data-v-8cd483ca="" width="45px" height="45px"
+                            src="/images/s7.png" class="img">
+                        <div data-v-8cd483ca="" class="name"> LỊCH SỬ GIAO DỊCH </div>
+                    </div>
+                    <div data-v-8cd483ca="" class="item c-tc"><img data-v-8cd483ca="" width="45px" height="45px"
+                            src="/images/s8.png" class="img">
+                        <div data-v-8cd483ca="" class="name"> NHẬT KÝ ĐĂNG NHẬP </div>
+                    </div>
+                    <div data-v-8cd483ca="" class="item c-tc">
+                        <div data-v-8cd483ca="" class="messageImg"><span data-v-8cd483ca="" class="number">34</span><img
+                                data-v-8cd483ca="" width="45px" height="45px" src="/images/s9.png" class="img"></div>
+                        <div data-v-8cd483ca="" class="name"> TIN TỨC </div>
+                    </div>
+                </div> -->
+          <div data-v-8cd483ca="" data-v-8cd483ca="" class="list">
+            <div data-v-8cd483ca="" class="bet-money">
+                <div data-v-8cd483ca="" class="c-row c-row-between">
+                  <div data-v-8cd483ca="" >
+                    <div data-v-8cd483ca="" class="bet-history c-row c-row-middle" onclick="location.href='/betHistory'">
+                      <img
+                              data-v-8cd483ca=""
+                              width="40px"
+                              height="40px"
+                              src="/images/list_bet.png"
+                              class="img"
+                      />
+                      <div
+                              data-v-8cd483ca=""
+                      >
+                        <div data-v-8cd483ca="">
+                          Đặt cược
+                        </div>
+                        <div data-v-8cd483ca="" class="txt-history" >
+                          Lịch sử đặt cược của tôi
+                        </div>
+                      </div>
+                    </div>
+                    <div data-v-8cd483ca="" class="bet-history c-row c-row-middle " onclick="location.href='/rechargeHistory'">
+                      <img
+                              data-v-8cd483ca=""
+                              width="40px"
+                              height="40px"
+                              src="/images/list_rechage.png "
+                              class="img"
+                      />
+                      <div
+                              data-v-8cd483ca=""
+
+                      >
+                        <div data-v-8cd483ca="">
+                          Nạp tiền
+                        </div>
+                        <div data-v-8cd483ca="" class="txt-history">
+                          Lịch sử nạp tiền của tôi
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-v-8cd483ca="">
+                    <div data-v-8cd483ca="" class="bet-history c-row c-row-middle" onclick="location.href='/transactionHistory'">
+                      <img
+                              data-v-8cd483ca=""
+                              width="40px"
+                              height="40px"
+                              src="/images/transaction.png"
+                              class="img"
+                      />
+                      <div
+                              data-v-8cd483ca=""
+
+                      >
+                        <div data-v-8cd483ca="">
+                          Giao dịch
+                        </div>
+                        <div data-v-8cd483ca="" class="txt-history">
+                          Lịch sử giao dịch của tôi
+                        </div>
+                      </div>
+                    </div>
+                    <div data-v-8cd483ca="" class="bet-history c-row c-row-middle" onclick="location.href='/withdrawHistory'">
+                      <img
+                              data-v-8cd483ca=""
+                              width="40px"
+                              height="40px"
+                              src="/images/list_wallet.png"
+                              class="img"
+                      />
+                      <div
+                              data-v-8cd483ca=""
+
+                      >
+                        <div data-v-8cd483ca="" >
+                          Rút tiền
+                        </div>
+                        <div data-v-8cd483ca="" class="txt-history">
+                          Lịch sử rút tiền của tôi
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div data-v-8cd483ca="" class="list-info">
+              <% if (level == 1) { %>
+                <div
+                        data-v-8cd483ca=""
+                        class="item c-row c-row-between"
+                        onclick="location.href='/admin/manager/index'"
+                >
+                  <div data-v-8cd483ca="" class="c-row c-row-middle">
+                    <img
+                            data-v-8cd483ca=""
+                            width="20px"
+                            height="20px"
+                            src="/images/s1.png"
+                            class="img"
+                    /><span data-v-8cd483ca="" class="name" style="margin-left: 9px">Quản trị viên</span>
+                  </div>
+                  <div data-v-8cd483ca="" class="c-row c-row-middle">
+                    <i
+                            data-v-8cd483ca=""
+                            class="van-icon van-icon-arrow"
+                            style="color: rgb(84, 94, 104); font-size: 20px"
+                    >
+                      <!---->
+                    </i>
+                  </div>
+                </div>
+              <% } %> <% if (level == 2) { %>
+                <div
+                        data-v-8cd483ca=""
+                        class="item c-row c-row-between"
+                        onclick="location.href='/manager/index'"
+                >
+                  <div data-v-8cd483ca="" class="c-row c-row-middle">
+                    <img
+                            data-v-8cd483ca=""
+                            width="20px"
+                            height="20px"
+                            src="/images/s1.png"
+                            class="img"
+                    /><span data-v-8cd483ca="" class="name" style="margin-left: 9px">Trang cộng tác viên</span>
+                  </div>
+                  <div data-v-8cd483ca="" class="c-row c-row-middle">
+                    <i
+                            data-v-8cd483ca=""
+                            class="van-icon van-icon-arrow"
+                            style="color: rgb(84, 94, 104); font-size: 20px"
+                    >
+                      <!---->
+                    </i>
+                  </div>
+                </div>
+                <% } %>
+
+              <div
+                      data-v-8cd483ca=""
+                      class="item c-row c-row-between"
+              >
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <img
+                          data-v-8cd483ca=""
+                          width="20px"
+                          height="20px"
+                          src="/images/notification.png"
+                          class="img"
+                  /><span data-v-8cd483ca="" class="name" style="margin-left: 9px">Thông báo</span>
+                </div>
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <div data-v-8cd483ca="" class="number_notification" style="font-size: 18px;padding:5px ;background-color: #ffff00;margin-right: 10px; line-height: 0!important;">2</div>
+                  <i
+                          data-v-8cd483ca=""
+                          class="van-icon van-icon-arrow"
+                          style="color: rgb(84, 94, 104); font-size: 20px"
+                  >
+                  </i>
+                </div>
+              </div>
+              <div
+                      data-v-8cd483ca=""
+                      class="item c-row c-row-between"
+                      onclick="location.href='/redenvelopes'"
+              >
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <img
+                          data-v-8cd483ca=""
+                          width="20px"
+                          height="20px"
+                          src="/images/ticket.png"
+                          class="img"
+                  /><span data-v-8cd483ca="" class="name" style="margin-left: 9px">Quy đổi quà</span>
+                </div>
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <i
+                          data-v-8cd483ca=""
+                          class="van-icon van-icon-arrow"
+                          style="color: rgb(84, 94, 104); font-size: 20px"
+                  >
+                    <!---->
+                  </i>
+                </div>
+              </div>
+              <div
+                      data-v-8cd483ca=""
+                      class="item c-row c-row-between"
+                      onclick="location.href='/instagram'"
+              >
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <img
+                          data-v-8cd483ca=""
+                          width="20px"
+                          height="20px"
+                          src="/images/IconTelegram.png"
+                          class="img"
+                  /><span data-v-8cd483ca="" class="name" style="margin-left: 9px"
+                  >Nhóm sự kiện Telegram</span>
+                </div>
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <i
+                          data-v-8cd483ca=""
+                          class="van-icon van-icon-arrow"
+                          style="color: rgb(84, 94, 104); font-size: 20px"
+                  >
+                    <!---->
+                  </i>
+                </div>
+              </div>
+              <div
+                      data-v-8cd483ca=""
+                      class="item c-row c-row-between"
+                      onclick="location.href='#'"
+              >
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <img
+                          data-v-8cd483ca=""
+                          width="20px"
+                          height="20px"
+                          src="/images/statistical.png"
+                          class="img"
+                  /><span data-v-8cd483ca="" class="name" style="margin-left: 9px" >Thống kê trò chơi</span>
+                </div>
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <i
+                          data-v-8cd483ca=""
+                          class="van-icon van-icon-arrow"
+                          style="color: rgb(84, 94, 104); font-size: 20px"
+                  >
+                    <!---->
+                  </i>
+                </div>
+              </div>
+              <div
+                      data-v-8cd483ca=""
+                      class="item c-row c-row-between"
+                      onclick="location.href='#'"
+              >
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <img
+                          data-v-8cd483ca=""
+                          width="20px"
+                          height="20px"
+                          src="/images/language.png"
+                          class="img"
+                  /><span data-v-8cd483ca="" class="name" style="margin-left: 9px"
+                  >Tiếng việt</span>
+                </div>
+                <div data-v-8cd483ca="" class="c-row c-row-middle">
+                  <i
+                          data-v-8cd483ca=""
+                          class="van-icon van-icon-arrow"
+                          style="color: rgb(84, 94, 104); font-size: 20px"
+                  >
+                    <!---->
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div data-v-8cd483ca="" class="support">
+              <div data-v-8cd483ca="" style="padding-left:10px;padding-top:10px;">
+                  Trung tâm dịch vụ
+              </div>
+              <div data-v-8cd483ca="" class="c-row c-column " style="margin-top: 2px">
+                <div data-v-8cd483ca="" class="c-row">
+                  <div data-v-8cd483ca="" class="m-t-10 c-row c-row-middle c-column c-column-between" style="width: 100px;margin-left: 5px;margin-right: 30px" onclick="location.href='/setting'" >
+                    <img
+                            alt="recharge"
+                            src="/images/setting.png"
+                            style="width: 20px; height: 20px"
+                    />
+                    <div
+                            data-v-8cd483ca=""
+                            class="li"
+                    >
+                      Cài đặt
+                    </div>
+                  </div>
+                  <div data-v-8cd483ca="" class="m-t-10 c-row c-row-middle c-column c-column-between" style="width: 100px;margin-right: 27px" onclick="location.href='#'" >
+                    <img
+                            alt="recharge"
+                            src="/images/phananh.png"
+                            style="width: 20px; height: 20px"
+                    />
+                    <div
+                            data-v-8cd483ca=""
+                            class="li"
+                    >
+                      Phản ảnh ý kiến
+                    </div>
+                  </div>
+                  <div data-v-8cd483ca="" class="m-t-10 c-row c-row-middle c-column c-column-between" style="width: 100px;margin-right: 10px" onclick="location.href='#'">
+                    <img
+                            alt="recharge"
+                            src="/images/megaphone.png"
+                            style="width: 20px; height: 20px"
+                    />
+                    <div
+                            data-v-8cd483ca=""
+                            class="li"
+                    >
+                      Thông báo
+                    </div>
+                  </div>
+                </div>
+                <div data-v-8cd483ca="" class="c-row c-row-around" style="margin-top: 2px;padding-bottom: 7px">
+                  <div data-v-8cd483ca="" class="m-t-10 c-row c-row-middle c-column c-column-between" style="width: 100px;margin-right: 14px" onclick="location.href='/keFuMenu'" >
+                    <img
+                            alt="recharge"
+                            src="/images/IconSupport.png"
+                            style="width: 20px; height: 20px"
+                    />
+                    <div
+                            data-v-8cd483ca=""
+                            class="li"
+                    >
+                      Chăm sóc khách hàng 24/7
+                    </div>
+                  </div>
+                  <div data-v-8cd483ca="" class="m-t-10 c-row c-row-middle c-column c-column-between" style="width: 100px;margin-right: 7px" onclick="location.href='/newtutorial'" >
+                    <img
+                            alt="recharge"
+                            src="/images/book.png"
+                            style="width: 20px; height: 20px"
+                    />
+                    <div
+                            data-v-8cd483ca=""
+                            class="li"
+                    >
+                      Hướng dẫn tân thủ
+                    </div>
+                  </div>
+                  <div data-v-8cd483ca="" class="m-t-10 c-row c-row-middle c-column c-column-between"style="width: 100px;margin-right: 5px" onclick="location.href='#'" >
+                    <img
+                            alt="recharge"
+                            src="/images/security.png"
+                            style="width: 20px; height: 20px"
+                    />
+                    <div
+                            data-v-8cd483ca=""
+                            class="li"
+                    >
+                      Chính sách bảo mật
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-v-8cd483ca="" class="logout-btn m-t-40">
+          <div data-v-8cd483ca="" class="gradient">
+            <button
+              data-v-8cd483ca=""
+              class="logout van-button van-button--default van-button--normal van-button--block van-button--round"
+              style="
+                color: rgb(255, 255, 255);
+                background: rgb(242, 65, 59);
+                border-color: rgb(242, 65, 59);
+              "
+            >
+              <div data-v-8cd483ca="" class="van-button__content">
+                <span data-v-8cd483ca="" class="van-button__text">
+                  <span data-v-8cd483ca="">ĐĂNG XUẤT</span>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          data-v-7692a079=""
+          data-v-8cd483ca=""
+          class="Loading c-row c-row-middle-center"
+          style="/* display: none; */"
+        >
+          <div data-v-7692a079="" class="van-loading van-loading--circular">
+            <span
+              data-v-7692a079=""
+              class="van-loading__spinner van-loading__spinner--circular"
+              style="color: rgb(0, 8, 255)"
+            >
+              <svg
+                data-v-7692a079=""
+                viewBox="25 25 50 50"
+                class="van-loading__circular"
+              >
+                <circle
+                  data-v-7692a079=""
+                  cx="50"
+                  cy="50"
+                  r="20"
+                  fill="none"
+                ></circle>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <%- include('../nav') -%>
+      </div>
+    </div>
+    <div class="van-overlay" style="z-index: 2001; display: none"></div>
+    <div
+      role="dialog"
+      class="van-dialog"
+      style="z-index: 2002; display: none"
+      aria-labelledby="Lời nhắc"
+    >
+      <div class="van-dialog__header">Lời nhắc</div>
+      <div class="van-dialog__content">
+        <div class="van-dialog__message van-dialog__message--has-title">
+          Bạn muốn đăng xuất không?
+        </div>
+      </div>
+      <div
+        class="van-hairline--top van-dialog__footer van-dialog__footer--buttons"
+      >
+        <button
+          class="van-button van-button--default van-button--large van-dialog__cancel"
+        >
+          <div class="van-button__content">
+            <span class="van-button__text">Hủy</span>
+          </div>
+        </button>
+        <button
+          class="van-button van-button--default van-button--large van-dialog__confirm van-hairline--left"
+        >
+          <div class="van-button__content">
+            <span class="van-button__text">Xác nhận</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/client.js"></script>
+    <script>
+      fetch("/api/webapi/GetUserInfo")
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.status === false) {
+            unsetCookie();
+            return false;
+          }
+          $(".infoName .name").text(data.data.name_user);
+          $(".infoName .id").text(`UID   |   ${data.data.id_user}`);
+          $(".infoName .id").attr("data-clipboard-text", "");
+          // $(".infoName .number").text(`Điện thoại:${data.data.phone_user}`);
+          $(".money .txt").text(` ${data.data.money_user}.00 ₫ `);
+        });
+    </script>
+    <!---->
+    <script>
+      $(".reload_money").click(function (e) {
+        e.preventDefault();
+        $(this).addClass("action block-click");
+        setTimeout(() => {
+          $(this).removeClass("action block-click");
+        }, 3000);
+      });
+
+      $(".refresh").click(function (e) {
+        e.preventDefault();
+        location.reload();
+      });
+
+      window.onload = function () {
+        $(".Loading").fadeOut(10);
+      };
+      $(".van-dialog__cancel").click(function (e) {
+        e.preventDefault();
+
+        $(".van-dialog").addClass(
+          "van-dialog-bounce-leave-active van-dialog-bounce-leave-to"
+        );
+        setTimeout(() => {
+          $(".van-dialog").removeClass(
+            "van-dialog-bounce-leave-active van-dialog-bounce-leave-to"
+          );
+          $(".van-dialog, .van-overlay").fadeOut(50);
+        }, 200);
+      });
+      $(".logout").click(function (e) {
+        e.preventDefault();
+        $(".van-dialog, .van-overlay").css("display", "");
+        $(".van-dialog").addClass(
+          "van-dialog-bounce-enter-active van-dialog-bounce-enter-to"
+        );
+        setTimeout(() => {
+          $(".van-dialog").removeClass(
+            "van-dialog-bounce-enter-active van-dialog-bounce-enter-to"
+          );
+        }, 500);
+      });
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      function unsetCookie() {
+        setCookie("token", "", 0);
+        setCookie("auth", "", 0);
+        var checkToken = getCookie("token");
+        var checkAuth = getCookie("auth");
+        if (!checkToken && !checkAuth) {
+          location.href = "/login";
+        } else {
+          setCookie("token", "", 0);
+          setCookie("auth", "", 0);
+          location.href = "/login";
+        }
+      }
+
+      $(".van-dialog__confirm").click(function (e) {
+        e.preventDefault();
+        unsetCookie();
+      });
+    </script>
+  </body>
+</html>

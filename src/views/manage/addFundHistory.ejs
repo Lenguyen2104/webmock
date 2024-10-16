@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nạp tiền</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <%- include('nav') %>
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Lịch sử cộng số dư</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+
+        <div class="form-group" style="text-align: center">
+            <input type="text" id="search" placeholder="Nhập thành viên bạn đang tìm kiếm" />
+        </div>
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- Default box -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Lịch sử cộng số dư</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0" style="overflow-y: hidden;">
+                    <table class="table table-striped projects">
+                        <thead>
+                        <tr>
+                            <th class="text-center">Id</th>
+                            <th class="text-center">Số tiền</th>
+                            <th class="text-center">Nội dung</th>
+                            <th class="text-center">Thời gian</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation example" style="margin-top: 20px; display: flex; justify-content: center">
+                    <ul class="pagination table1">
+                        <li class="page-item previous" id="previous_f1">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <div id="numbers" style="display: flex">
+                            <li class="page-item">
+                                <a class="page-link active text-white" id="text-page_f1"></a>
+                            </li>
+                        </div>
+                        <li class="page-item next" id="next_f1">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </section>
+    </div>
+</div>
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/dist/js/adminlte.min.js"></script>
+<script src="/js/admin/admin.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<script>
+
+    let f1_pageno = 1;
+    let f1_limit = 10;
+    let total_page_1 = 1;
+
+    function formateT(params) {
+        let result = params < 10 ? "0" + params : params;
+        return result;
+    }
+
+    function timerJoin(params = "") {
+        let date = "";
+        if (params) {
+            date = new Date(Number(params));
+        } else {
+            date = new Date();
+        }
+        let years = formateT(date.getFullYear());
+        let months = formateT(date.getMonth() + 1);
+        let days = formateT(date.getDate());
+
+        let hours = formateT(date.getHours());
+        let minutes = formateT(date.getMinutes());
+        let seconds = formateT(date.getSeconds());
+        return (
+            years +
+            "-" +
+            months +
+            "-" +
+            days +
+            " " +
+            hours +
+            ":" +
+            minutes +
+            ":" +
+            seconds
+        );
+    }
+    function show(params) {
+        if (params.length == 0) {
+            $('tbody').html(`
+            <tr class="text-center">
+              <td colspan="7">không có dữ liệu...</td>
+            </tr>
+          `);
+            return;
+        }
+        let html = '';
+        let show = params.map((data) => {
+            html += `<tr class="text-center">
+                  <td id="${data.id}">
+                    ${data.phone}
+                  </td>
+                  <td>
+                    <b>${data.money}</b>
+                  </td>
+                  <td>
+                    <b>${data.description}</b>
+                  </td>
+                  <td>
+                   <b>${timerJoin(data.time)}</b>
+                  </td>
+                  `;
+        })
+        $('tbody').html(html);
+    }
+
+    $("#search").on("keyup", function() {
+        var value = $('#search').val().trim();
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/admin/searchAllAdditionalFunds",
+            data: {
+                search: value,
+                pageno: f1_pageno,
+                limit: f1_limit,
+            },
+            dataType: "json",
+            success: function (response) {
+                if (response.status === true) return show(response.data);
+            }
+        });
+    });
+
+    $.ajax({
+        type: "POST",
+        url: "/api/webapi/admin/getAllAdditionalFunds",
+        data: {
+            pageno: f1_pageno,
+            limit: f1_limit,
+            language: "vi",
+        },
+        dataType: "json",
+        success: function (response) {
+            console.log('res',response)
+            total_page_1 = response.page_total;
+            $('#text-page_f1').text(f1_pageno + ' / ' + response.page_total);
+            show(response.data)
+        }
+    });
+    $('#next_f1').click(function (e) {
+        f1_pageno += 1;
+        if(f1_pageno > total_page_1) {
+            f1_pageno = total_page_1;
+        }
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/admin/getAllAdditionalFunds",
+            data: {
+                pageno: f1_pageno,
+                limit: f1_limit,
+                language: "vi",
+            },
+            dataType: "json",
+            success: function (response) {
+                if(f1_pageno === response.f1s_page_total) {
+                    $('#next_f1').addClass('block-click');
+                }
+                $('#text-page_f1').text(f1_pageno + ' / ' + response.page_total);
+                if (response.status === true) return show(response.data);
+            }
+        });
+    });
+
+    $('#previous_f1').click(function (e) {
+
+        $('#next_f1').removeClass('block-click');
+        f1_pageno -= 1;
+        e.preventDefault();
+        console.log(f1_pageno)
+        if(f1_pageno < 1) return f1_pageno = 1;
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/admin/getAllAdditionalFunds",
+            data: {
+                pageno: f1_pageno,
+                limit: f1_limit,
+                language: "vi",
+            },
+            dataType: "json",
+            success: function (response) {
+                $('#text-page_f1').text(f1_pageno + ' / ' + response.page_total);
+                if (response.status === true) return show(response.data);
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

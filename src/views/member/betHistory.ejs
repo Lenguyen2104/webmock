@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html
+        translate="no"
+        data-dpr="1"
+        style="font-size: 48.16px"
+        style="min-height: 100vh"
+>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+            name="viewport"
+    />
+    <title>KIKI79</title>
+    <link href="/css/member/main.css" rel="stylesheet" />
+    <link href="/css/member/chunk-1.css" rel="stylesheet" />
+    <link href="/css/member/chunk-2.css" rel="stylesheet" />
+    <link href="/css/member/chunk-3.css" rel="stylesheet" />
+    <link href="/css/member/chunk-4.css" rel="stylesheet" />
+    <link href="/css/member/chunk-5.css" rel="stylesheet" />
+    <link href="/css/member/chunk-6.css" rel="stylesheet" />
+    <link href="/css/member/chunk-7.css" rel="stylesheet" />
+    <link
+            rel="shortcut icon"
+            href="/images/bitbug_favicon.ico"
+            type="image/x-icon"
+    />
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #9195a3;
+            padding: 0;
+            margin: 0;
+        }
+        .block-click {
+            pointer-events: none;
+        }
+
+        .mian.page[data-v-8cd483ca] {
+            padding-bottom: 0;
+        }
+        .mian .list-game[data-v-106b99c8]{
+            margin: 0.53333rem .4rem .4rem;
+            width: 100%;
+            overflow-x: auto;
+        }
+        .mian .list-game .list-g[data-v-106b99c8]{
+            white-space: nowrap;
+        }
+
+        .list-g > * {
+            display: inline-block; /* Hiển thị các phần tử con trên cùng một dòng */
+            white-space: normal; /* Cho phép các phần tử con xuống dòng bình thường */
+            vertical-align: top;
+        }
+
+        .mian .list-game .item[data-v-106b99c8] {
+            text-align: center;
+            padding: 0.26667rem 0;
+            margin-bottom: 0.26667rem;
+            width: 31%;
+            border-radius: 0.26667rem;
+            overflow: hidden;
+            box-shadow: 0 4px 10px #0000004d;
+        }
+        .mian .list-game .item.action[data-v-106b99c8] {
+            background-image: linear-gradient(90deg, #d71212, #ff5851);
+            color: #fff;
+        }
+
+        .mian .game-slt[data-v-106b99c8] {
+            margin: 0.53333rem .4rem .4rem;
+        }
+
+        .mian .game-slt .game-select-container[data-v-106b99c8] {
+            border-radius: 5px;
+            border-color: #fff;
+            box-shadow: 0 4px 10px #0000004d;
+            width: 48%;
+        }
+        .mian .game-slt .ipt[data-v-106b99c8] {
+            border-radius: 5px;
+            box-shadow: 0 4px 10px #0000004d;
+            width: 100%;
+            height:50px;
+            border: none;
+        }
+        .mian .game-slt .btn.filter[data-v-106b99c8] {
+            width: 90%;
+            color: #fff;
+            padding: 3px;
+            border: none;
+            background-image: linear-gradient(90deg, #d71212, #ff5851);
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .mian .game-slt .btn.refresh[data-v-106b99c8] {
+            color: #fff;
+            padding: 3px;
+            border: none;
+            background-color: #2b2b2b;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .mian .game-info[data-v-106b99c8] {
+
+            border-bottom-left-radius:6px;
+            border-bottom-right-radius:6px;
+            margin: 0.53333rem 10px .4rem;
+        }
+        .mian .game-info .item-game[data-v-106b99c8] {
+            margin: 0.53333rem .4rem .4rem;
+            box-shadow: 0 4px 10px #0000004d;
+        }
+        .mian .game-info .name-game[data-v-106b99c8] {
+            border-bottom: 1px solid #2b2b2b;
+            margin: 0.53333rem .4rem .4rem;
+        }
+
+
+        .mian .game-info .info-game[data-v-106b99c8] {
+            border-bottom: 1px dashed #2b2b2b;
+            margin: 0.53333rem .4rem .4rem;
+        }
+        .mian .game-info .info-bet[data-v-106b99c8] {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .mian .game-info .info-bet-number[data-v-106b99c8] {
+            margin: 0.53333rem .4rem .4rem;
+        }
+        .mian .game-info .box-info-bet[data-v-106b99c8]{
+
+            margin: 0.53333rem  10px 10px;
+        }
+
+        .mian .game-info .box-info-bet .detail[data-v-106b99c8] {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 0.26667rem;
+            width: 140px;
+            background-image: linear-gradient(40deg, #e5e7f6 35%, #f5f3fb);
+            border: 1px solid #bcbfd7;
+            border-radius: 5px;
+        }
+
+        .mian .page-nav .arr[data-v-106b99c8] {
+            height: 1.06667rem;
+            width: 1.06667rem;
+            background-color: #d8d8d8;
+            border-radius: .13333rem;
+        }
+
+        .mian .page-nav .arr.action[data-v-106b99c8] {
+            background-color: #fb4e4e;
+            color: #fff;
+        }
+
+        .mian .page-nav .number[data-v-106b99c8] {
+            width: 2.66667rem;
+            height: 1.06667rem;
+            line-height: 1.06667rem;
+            background-color: #f6f7f8;
+        }
+        .red[data-v-106b99c8]  {
+            color: red;
+        }
+        .green[data-v-106b99c8] {
+            color: green;
+        }
+        .red_violet[data-v-106b99c8] {
+            color: red;
+        }
+        .green_violet[data-v-106b99c8] {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div data-v-8cd483ca="" class="mian page">
+        <div data-v-106b99c8="" data-v-25d9c352="" class="c-row navbar">
+            <div
+                    data-v-106b99c8=""
+                    class="navbar-left"
+                    onclick="location.href='/mian'"
+            >
+                <div
+                        data-v-25d9c352=""
+                        data-v-106b99c8=""
+                        class="c-row c-row-middle-center"
+                >
+                    <img
+                            data-v-25d9c352=""
+                            data-v-106b99c8=""
+                            src="/images/back.c3244ab0.png"
+                            class="navbar-back"
+                    />
+                </div>
+            </div>
+            <div data-v-106b99c8="" class="navbar-title">Lịch sử cược</div>
+            <div data-v-106b99c8="" class="navbar-right"></div>
+        </div>
+        <div data-v-106b99c8="" class="list-game">
+            <div data-v-106b99c8="" class=" list-g c-row c-row-between">
+                <div data-v-106b99c8="" class="item action" type="soxo">
+                    <img
+                            data-v-67caa467=""
+                            width="23px"
+                            height="23px"
+                            src="/images/CP.png"
+                            class="img"
+                    />
+                    <div data-v-106b99c8="" class="name">Xổ số</div>
+                </div>
+                <div data-v-106b99c8="" class="item" type="casino">
+                    <img
+                            data-v-67caa467=""
+                            width="23px"
+                            height="23px"
+                            src="/images/casino.png"
+                            class="img"
+                    />
+                    <div data-v-106b99c8="" class="name">Casino</div>
+                </div>
+                <div data-v-106b99c8="" class="item" type="slots">
+                    <img
+                            data-v-67caa467=""
+                            width="23px"
+                            height="23px"
+                            src="/images/slots.png"
+                            class="img"
+                    />
+                    <div data-v-106b99c8="" class="name">Slots</div>
+                </div>
+                <div data-v-106b99c8="" class="item" type="banca">
+                    <img
+                            data-v-67caa467=""
+                            width="23px"
+                            height="23px"
+                            src="/images/banca.png"
+                            class="img"
+                    />
+                    <div data-v-106b99c8="" class="name">Bắn cá</div>
+                </div>
+            </div>
+        </div>
+        <div data-v-106b99c8="" class="game-slt">
+            <div data-v-106b99c8="" class="c-row c-row-middle">
+                <select data-v-106b99c8="" name="pets" id="game-select" class="game-select-container" style="height: 50px;margin-right: 10px">
+                    <option value="all" >Toàn bộ</option>
+                    <option value="wingo">Wingo</option>
+                    <option value="k3">K3</option>
+                    <option value="5d">5D</option>
+                </select>
+                <div class="input-container" style="height: 53px;width: 174px">
+                    <input
+                            data-v-106b99c8=""
+                            type="date"
+                            style="padding-left: 10px"
+                            placeholder="Chọn ngày"
+                            class="ipt"
+                            id="dateInput"
+                    />
+                </div>
+            </div>
+            <div data-v-106b99c8="" class="c-row" style="margin-top: 10px">
+                <button data-v-106b99c8="" class="btn filter c-row c-row-middle c-row-middle-center "><img src="/images/IconSearchGray.png" style="width: 20px;height: 20px"/>Lọc</button>
+                <button data-v-106b99c8="" class="btn refresh"><img src="/images/reload.png" style="width: 20px;height: 20px"/></button>
+            </div>
+        </div>
+        <div data-v-106b99c8="" class="game-info">
+            <div data-v-106b99c8="" class="list-game-info" id="list_game" style="height: 568px;overflow: auto">
+
+            </div>
+
+        </div>
+        <div data-v-106b99c8="" class="page-nav c-row c-row-center c-tc" style="margin-top: 10px">
+            <div data-v-106b99c8="" class="arr c-row c-row-middle-center">
+                <i data-v-106b99c8="" class="van-icon van-icon-arrow-left icon" style="font-size: 20px">
+                    <!---->
+                </i>
+            </div>
+            <div data-v-106b99c8="" class="number">1/1</div>
+            <div data-v-106b99c8="" class="arr c-row c-row-middle-center action">
+                <i data-v-106b99c8="" class="van-icon van-icon-arrow icon action" style="font-size: 20px">
+                    <!---->
+                </i>
+            </div>
+        </div>
+    </div>
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/vn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/client.js"></script>
+    <script>
+        fetch("/api/webapi/GetUserInfo")
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.status === false) {
+                    unsetCookie();
+                    return false;
+                }
+                $(".info .nickname").text(data.data.name_user);
+                $(".infoName .uid").text(`${data.data.id_user}`);
+                $(".infoName .uid").attr("data-clipboard-text", "");
+                $(".money .txt").text(` ${data.data.money_user}.00 ₫ `);
+            });
+    </script>
+    <!---->
+    <script>
+        window.onload = function () {
+            $(".Loading").fadeOut(10);
+        };
+        const currentDate = new Date();
+        const day = String(currentDate.getDate()).padStart(2, "0");
+        const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+        const year = currentDate.getFullYear();
+        const formattedDefaultDate = `${day}-${month}-${year}`;
+        document.getElementById("dateInput").value = formattedDefaultDate;
+        flatpickr("#dateInput", {
+            dateFormat: "d-m-Y",
+            altFormat: "d-m-Y",
+            locale: "vn",
+            weekNumbers: true,
+            defaultDate: formattedDefaultDate,
+        });
+        let selectedValue = 'all'; // Biến được định nghĩa ở phạm vi toàn cục
+        let selectedDate = $('#dateInput').val();
+
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(";");
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        $("#game-select").change(function() {
+            selectedValue = $(this).val(); // Gán giá trị của $(this).val() cho selectedValue
+        });
+
+        // Thêm sự kiện cho #dateInput
+        $("#dateInput").change(function() {
+            selectedDate = $(this).val(); // Loại bỏ từ khóa var
+        });
+        $("#dateInput").on("change", function() {
+            selectedDate = $(this).val();
+        });
+
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/bet/getAllBetHistory",
+            data: {
+                typeid: selectedValue,
+                selectedDate: selectedDate,
+                pageno: "0",
+                limit: "10",
+                language: "vi",
+            },
+            dataType: "json",
+            success: function (response) {
+                let data = response.data;
+                console.log('data',response)
+                $(".mian .page-nav .number").text("1/" + response.page_total);
+                showListGame(data);
+            },
+        });
+        var pageno = 1;
+        var limit = 10;
+        var page = 1;
+        $(".game-slt .filter").click(function (e) {
+            e.preventDefault();
+            if (selectedDate == undefined) {
+                selectedDate = $('#dateInput').val();
+            }
+            if (selectedValue == undefined) {
+                selectedValue = "all"
+            }
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/bet/getAllBetHistory",
+                data: {
+                    typeid: selectedValue,
+                    selectedDate: selectedDate,
+                    pageno: "0",
+                    limit: "10",
+                    language: "vi",
+                },
+                dataType: "json",
+                success: function (response) {
+                    let data = response.data;
+                    console.log('data',response)
+                    $(".mian .page-nav .number").text("1/" + response.page_total);
+                    showListGame(data);
+                },
+            });
+        });
+
+        function showListGame(list_game){
+            if (list_game.length == 0) {
+                return $(`.game-info #list_game`).html(
+                    `
+                    <div data-v-a9660e98="" class="van-empty">
+                        <div class="van-empty__image">
+                            <img src="/images/empty-image-default.png" />
+                        </div>
+                        <p class="van-empty__description">Không có dữ liệu</p>
+                    </div>
+                    `
+                );
+            }
+            let htmls = "";
+
+            let color = "";
+
+            // console.log('list',list_game)
+            let result = list_game.map((list_game) => {
+                let join = list_game.bet;
+                if (join == "l") {
+                    color = "To";
+                } else if (join == "n") {
+                    color = "Nhỏ";
+                } else if (join == "t") {
+                    color = "Tím";
+                } else if (join == "d") {
+                    color = "Đỏ";
+                } else if (join == "x") {
+                    color = "Xanh";
+                } else if (join == "0") {
+                    color = "Đỏ tím";
+                } else if (join == "5") {
+                    color = "Xanh tím";
+                } else if (Number(join) % 2 === 0) {
+                    color = "Đỏ";
+                } else if (Number(join) % 2 !== 0) {
+                    color = "Xanh";
+                }
+                return (htmls += `
+<div data-v-106b99c8="" class="item-game">
+                    <div data-v-106b99c8="" class="name-game c-row c-row-between c-row-middle ">
+                        <div data-v-106b99c8="" style="margin-top: 10px;margin-bottom: 10px">
+                            <div data-v-106b99c8="" style="font-weight: bold">${list_game.detail}</div>
+                            <div data-v-a9660e98="">
+                                <div data-v-a9660e98="" class="tiem">${timerJoin(list_game.time)}</div>
+                            </div>
+                        </div>
+                        <div data-v-106b99c8="" class="${list_game.status == 1? "green": list_game.status == 2? "red": ""}">${
+                    list_game.status == 1
+                        ? "Thành công"
+                        : list_game.status == 2
+                            ? "Thất bại"
+                            : ""}</div>
+                    </div>
+                    <div data-v-106b99c8="" class="info-game">
+                        <div data-v-106b99c8="" class="info-bet" >
+                            <div data-v-106b99c8="" class="item-info c-row c-row-between c-row-middle">
+                                <div data-v-106b99c8="" class="c-row c-row-middle">
+                                    <img src="/images/dot.png" style="width: 12px;height: 12px"/>
+                                    <div data-v-106b99c8="" style="margin-left: 15px">Kiểu</div>
+                                </div>
+                                <div data-v-106b99c8="">${list_game.type}</div>
+                            </div>
+                        </div>
+                        <div data-v-106b99c8="" class="info-bet" >
+                            <div data-v-106b99c8="" class="item-info c-row c-row-between c-row-middle">
+                                <div data-v-106b99c8="" class="c-row c-row-middle">
+                                    <img src="/images/dot.png" style="width: 12px;height: 12px"/>
+                                    <div data-v-106b99c8="" style="margin-left: 15px">Kỳ xổ số</div>
+                                </div>
+                                <div data-v-106b99c8="" class="kyxoNumber">${list_game.stage}</div>
+                            </div>
+                        </div>
+                        <div data-v-106b99c8="" class="info-bet" >
+                            <div data-v-106b99c8="" class="item-info c-row c-row-between c-row-middle">
+                                <div data-v-106b99c8="" class="c-row c-row-middle">
+                                    <img src="/images/dot.png" style="width: 12px;height: 12px"/>
+                                    <div data-v-106b99c8="" style="margin-left: 15px">Thời gian</div>
+                                </div>
+                                <div data-v-106b99c8="">${timerJoin(list_game.time)}</div>
+                            </div>
+                        </div>
+                        <div data-v-106b99c8="" class="info-bet" >
+                            <div data-v-106b99c8="" class="item-info c-row c-row-between c-row-middle">
+                                <div data-v-106b99c8="" class="c-row c-row-middle">
+                                    <img src="/images/dot.png" style="width: 12px;height: 12px"/>
+                                    <div data-v-106b99c8="" style="margin-left: 15px">Lựa chọn</div>
+                                </div>
+                                <div data-v-106b99c8="">${color}</div>
+                            </div>
+                        </div>
+                        <div data-v-106b99c8="" class="info-bet" >
+                            <div data-v-106b99c8="" class="item-info c-row c-row-between c-row-middle">
+                                <div data-v-106b99c8="" class="c-row c-row-middle">
+                                    <img src="/images/dot.png" style="width: 12px;height: 12px"/>
+                                    <div data-v-106b99c8="" style="margin-left: 15px">Tiền cược</div>
+                                </div>
+                                <div data-v-106b99c8="">${list_game.money}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-106b99c8="" class="info-bet-number" style="margin-top: 20px">
+                        <div data-v-106b99c8="" class="info-bet">
+                            <div data-v-106b99c8="" class="item-info">
+                                <div data-v-106b99c8="" class="c-row c-row-middle">
+                                    <img src="/images/dot.png" style="width: 12px;height: 12px"/>
+                                    <div data-v-106b99c8="" style="margin-left: 15px">Kết quả mở thưởng</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-v-106b99c8="" class="info-bet">
+                            <div data-v-106b99c8="" class="item-info">
+                                <div data-v-106b99c8="" class="c-row c-row-middle">
+                                    <img src="/images/dot.png" style="width: 12px;height: 12px"/>
+                                    <div data-v-106b99c8="" style="margin-left: 15px">${list_game.result}</div>
+                                    <div data-v-106b99c8="" style="margin-left: 15px" class="${
+                    list_game.result == 0
+                        ? "red_violet"
+                        : list_game.result == 5
+                            ? "green_violet"
+                            : list_game.result % 2 == 0
+                                ? "red"
+                                : "green" }">${
+                                                                                        list_game.result == 0
+                                                                                            ? "Đỏ tím"
+                                                                                            : list_game.result == 5
+                                                                                                ? "Xanh tím"
+                                                                                                : list_game.result % 2 == 0
+                                                                                                    ? "Đỏ"
+                                                                                                    : "Xanh" }</div>
+                                    <div data-v-106b99c8="" style="margin-left: 15px">${list_game.amount < 5 ? "Nhỏ" : "Lớn" }</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-106b99c8="" class="box-info-bet c-row c-row-between">
+                        <div data-v-106b99c8="" class="box-bet-left c-row c-column">
+                            <div data-v-106b99c8="" class="detail">
+                                <div data-v-106b99c8="">${list_game.price}</div>
+                                <div data-v-106b99c8="" class="name">Tiền cược thực tế</div>
+                            </div>
+                            <div data-v-106b99c8="" class="detail">
+                                <div data-v-106b99c8="">${list_game.fee}</div>
+                                <div data-v-106b99c8="" class="name">Phí giao dịch</div>
+                            </div>
+                        </div>
+                        <div data-v-106b99c8="" class="box-bet-right c-row c-column">
+                            <div data-v-106b99c8="" class="detail">
+                                <div data-v-106b99c8="">${list_game.get}</div>
+                                <div data-v-106b99c8="" class="name">Tiền thắng</div>
+                            </div>
+                            <div data-v-106b99c8="" class="detail">
+                                <div data-v-106b99c8="" class="${list_game.status == 1? "green": list_game.status == 2? "red": ""}" >${list_game.profit} </div>
+                                <div data-v-106b99c8="" class="name">Lợi nhuận</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`)
+            });
+            $(`.game-info #list_game`).html(htmls);
+        }
+        function formateT(params) {
+            let result = params < 10 ? "0" + params : params;
+            return result;
+        }
+
+        function timerJoin(params = "") {
+            let date = "";
+            if (params) {
+                date = new Date(Number(params));
+            } else {
+                date = new Date();
+            }
+            let years = formateT(date.getFullYear());
+            let months = formateT(date.getMonth() + 1);
+            let days = formateT(date.getDate());
+
+            let hours = formateT(date.getHours());
+            let minutes = formateT(date.getMinutes());
+            let seconds = formateT(date.getSeconds());
+            return (
+                years +
+                "-" +
+                months +
+                "-" +
+                days +
+                " " +
+                hours +
+                ":" +
+                minutes +
+                ":" +
+                seconds
+            );
+        }
+
+        function alertMessJoin(msg) {
+            if (msg == undefined) {
+                msg = 'Không còn dữ liệu'
+            }
+            $("body").append(
+                `
+                <div data-v-1dcba851="" class="msg">
+                    <div data-v-1dcba851="" class="msg-content v-enter-active v-enter-to" style=""> ${msg} </div>
+                </div>
+                `
+            );
+            setTimeout(() => {
+                $(".msg .msg-content").removeClass("v-enter-active v-enter-to");
+                $(".msg .msg-content").addClass("v-leave-active v-leave-to");
+                setTimeout(() => {
+                    $("body .msg").remove();
+                }, 500);
+            }, 1000);
+        }
+
+
+        $(".mian .page-nav .arr:eq(1)").click(function (e) {
+            e.preventDefault();
+            pageno += 1;
+            let pageto = limit;
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/bet/getAllBetHistory",
+                data: {
+                    typeid: selectedValue,
+                    selectedDate: selectedDate,
+                    pageno: pageno,
+                    limit: pageto,
+                    language: "vi",
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (pageno > response.page_total) {
+                        $(".mian .page-nav .arr:eq(1)").addClass(
+                            "block-click"
+                        );
+                        $(".mian .page-nav .arr:eq(1)").removeClass(
+                            "action"
+                        );
+                        $(".mian .page-nav .van-icon-arrow").css(
+                            "color",
+                            "#fff"
+                        );
+                        alertMessJoin(response.msg);
+                        pageno -=1
+                        return false;
+                    }
+                    $(".mian .page-nav .arr:eq(0)").removeClass(
+                        "block-click"
+                    );
+                    $(".mian .page-nav .arr:eq(0)").addClass("action");
+                    $(".mian .page-nav .van-icon-arrow-left").css(
+                        "color",
+                        "#fff"
+                    );
+                    page += 1;
+                    $(".mian .page-nav .number").text( page + "/" + response.page_total);
+                    let list_orders = response.data;
+                    showListGame(list_orders);
+                },
+            });
+        });
+        $(".mian .page-nav .arr:eq(0)").click(function (e) {
+            e.preventDefault();
+            $(".mian  .page-nav .arr:eq(1)").removeClass(
+                "block-click"
+            );
+            $(".mian .page-nav .arr:eq(1)").addClass("action");
+            $(".mian .page-nav .van-icon-arrow-right").css(
+                "color",
+                "#fff"
+            );
+            pageno -= 1;
+            let pageto = limit;
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/bet/getAllBetHistory",
+                data: {
+                    typeid: selectedValue,
+                    selectedDate: selectedDate,
+                    pageno: pageno,
+                    limit: pageto,
+                    language: "vi",
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (page - 1 <= 1) {
+                        $(".mian  .page-nav .arr:eq(0)").addClass(
+                            "block-click"
+                        );
+                        $(".mian  .page-nav .arr:eq(0)").removeClass(
+                            "action"
+                        );
+                        $(".mian  .page-nav .van-icon-arrow-left").css(
+                            "color",
+                            "#7f7f7f"
+                        );
+                    }
+                    if (response.status === false) {
+                        pageno = 0;
+                        $(".mian .page-nav .arr:eq(0)").addClass(
+                            "block-click"
+                        );
+                        $(".mian .page-nav .arr:eq(0)").removeClass(
+                            "action"
+                        );
+                        $(".mian .page-nav .van-icon-arrow-left").css(
+                            "color",
+                            "#7f7f7f"
+                        );
+                        alertMessJoin(response.msg);
+                        return false;
+                    }
+                    page -= 1;
+                    $(".mian .page-nav .number").text( page + "/" + response.page_total);
+                    let list_orders = response.data;
+                    // $(".time-box .info .number").text(response.period);
+                    showListGame(list_orders);
+                },
+            });
+        });
+        function unsetCookie() {
+            setCookie("token", "", 0);
+            setCookie("auth", "", 0);
+            var checkToken = getCookie("token");
+            var checkAuth = getCookie("auth");
+            if (!checkToken && !checkAuth) {
+                location.href = "/login";
+            } else {
+                setCookie("token", "", 0);
+                setCookie("auth", "", 0);
+                location.href = "/login";
+            }
+        }
+
+        $(".refresh").click(function (e) {
+            e.preventDefault();
+            location.reload();
+        });
+
+
+        $(".list-game .item").click(function (e) {
+            e.preventDefault();
+            $(".list-game .item").removeClass("action");
+            $(this).addClass("action");
+        });
+
+        $(".info .itemUID").click(function (e) {
+            let text = $(this).find(".uid").text().trim();
+            navigator.clipboard.writeText(text);
+            $(this).addClass("block-click");
+            alertMess("Sao chép thành công", $(this));
+        });
+        function alertMess(text, sic) {
+            $("body").append(
+                `
+                <div data-v-1dcba851="" class="msg">
+                    <div data-v-1dcba851="" class="msg-content v-enter-active v-enter-to" style=""> ${text} </div>
+                </div>
+                `
+            );
+            setTimeout(() => {
+                $(".msg .msg-content").removeClass("v-enter-active v-enter-to");
+                $(".msg .msg-content").addClass("v-leave-active v-leave-to");
+                setTimeout(() => {
+                    $(".msg").remove();
+                }, 100);
+                sic.removeClass("block-click");
+            }, 1000);
+        }
+        $(".van-dialog__confirm").click(function (e) {
+            e.preventDefault();
+            unsetCookie();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danh sách thành viên F9</title>
+    <!-- <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="/css/admin.css" /> -->
+    <style>
+        .input-container {
+            margin-top: 5px;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+<!-- Main content -->
+<section class="content">
+    <div class="input-container" style="height: 40px;display: flex;justify-content: flex-end" >
+        <input
+                style="height:40px; width: 200px; border-radius: 7px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);padding-left: 10px; border: .02667rem solid #ababab;"
+                data-v-0ff6946a=""
+                type="date"
+                placeholder="Chọn ngày"
+                class="ipt"
+                id="dateInput9"
+        />
+    </div>
+    <!-- Default box -->
+    <div class="card" style="margin-top: 10px">
+        <div class="card-header">
+                <h3 class="card-title">Danh sách F9</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body p-0" style="overflow-y: hidden">
+            <table class="table table-striped projects" id="table1">
+                <thead>
+                <tr>
+                    <th class="text-center">SĐT</th>
+                    <th class="text-center">Nạp đầu</th>
+                    <th class="text-center">Số lần nạp</th>
+                    <th class="text-center">Số dư</th>
+                    <th class="text-center">Tổng tiền</th>
+                    <th class="text-center">Tổng nạp</th>
+                    <th class="text-center">Tổng rút</th>
+                    <th class="text-center">Trạng thái</th>
+                    <th class="text-center">Ngày đăng ký</th>
+                </tr>
+                </thead>
+                <tbody id="Flist9">
+                <!-- #region -->
+                </tbody>
+            </table>
+        </div>
+        <nav aria-label="Page navigation example" style="margin-top: 20px; display: flex; justify-content: center">
+            <ul class="pagination table1">
+                <li class="page-item previous" id="previous_f9">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <div id="numbers" style="display: flex">
+                    <li class="page-item">
+                        <a class="page-link active text-white" id="text-page_f9"></a>
+                    </li>
+                </div>
+                <li class="page-item next" id="next_f9">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/dist/js/adminlte.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<script>
+
+    let url9 = window.location.pathname;
+    let phones9 = url9.split("/");
+    let phone9 = phones9[phones9.length - 1];
+
+    const currentDate9 = new Date();
+    const day9 = String(currentDate9.getDate()).padStart(2, "0");
+    const month9= String(currentDate9.getMonth() + 1).padStart(2, "0");
+    const year9 = currentDate.getFullYear();
+    const formattedDefaultDate9 = `${day9}-${month9}-${year9}`;
+    document.getElementById("dateInput9").value = formattedDefaultDate9;
+    flatpickr("#dateInput9", {
+        dateFormat: "d-m-Y",
+        altFormat: "d-m-Y",
+        locale: "vn",
+        weekNumbers: true,
+        defaultDate: formattedDefaultDate9,
+    });
+    let selectedDate9 = $('#dateInput9').val();
+
+    const convertDateTime9 = (timestamp) => {
+        const date = new Date(+timestamp);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = String(date.getFullYear());
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+
+        const formattedDate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+        return formattedDate;
+    }
+
+    const Render9 = (datas) => {
+        let html = '';
+        datas.map((data) => {
+            html += `
+        <tr class="text-center" style="">
+          <td>${data.phone}</td>
+          <td>
+            ${data.first_recharge}
+          </td>
+          <td>
+            ${data.rechargeCount}
+          </td>
+          <td>
+            <b style="color: #2003db">${data.surplus}</b>
+          </td>
+          <td>
+            ${data.total_amount}
+          </td>
+          <td class="project-state">
+            ${data.total_recharge}
+          </td>
+          <td>
+            ${data.total_withdrawal}
+          </td>
+          <td>
+            ${(data.status == 1) ? '<span class="badge badge-success">Online</span>' : '<span class="badge badge-warning">Banded</span>'}
+          </td>
+          <td class="project-actions text-center" style="min-width: 100px">
+            ${convertDateTime9(data.time)}
+          </td>
+        </tr>`;
+            $("#Flist9").html(html);
+        });
+    }
+
+    let f9_pageno = 1;
+    let f9_limit = 30;
+    let total_page_9 = 1;
+
+    $("#dateInput9").change(function() {
+        selectedDate9 = $(this).val(); // Loại bỏ từ khóa var
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/admin/listF1",
+            data: {
+                typeid: "1",
+                pageno: f9_pageno,
+                limit: f9_limit,
+                selectedDate: selectedDate9,
+                language: "vi",
+                phone: phone9
+            },
+            dataType: "json",
+            success: function (response) {
+                total_page_9 = response.f9s_page_total;
+                $('#text-page_f9').text(f9_pageno + ' / ' + response.f9s_page_total);
+                if (response.status === true) return Render9(response.f9sData);
+            },
+        }); // Gọi fetchData với giá trị selectedDate
+    });
+
+    $.ajax({
+        type: "POST",
+        url: "/api/webapi/admin/listF1",
+        data: {
+            typeid: "1",
+            pageno: f9_pageno,
+            limit: f9_limit,
+            selectedDate: selectedDate9,
+            language: "vi",
+            phone: phone9
+        },
+        dataType: "json",
+        success: function (response) {
+            total_page_9 = response.f9s_page_total;
+            $('#text-page_f9').text(f9_pageno + ' / ' + response.f9s_page_total);
+            if (response.status === true) return Render9(response.f9sData);
+        },
+    });
+
+    $('#next_f9').click(function (e) {
+        f9_pageno += 1;
+        if(f9_pageno > total_page_9) {
+            f9_pageno = total_page_9;
+        }
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/admin/listF1",
+            data: {
+                typeid: "1",
+                pageno: f9_pageno,
+                limit: f9_limit,
+                selectedDate: selectedDate9,
+                language: "vi",
+                phone: phone9
+            },
+            dataType: "json",
+            success: function (response) {
+                if(f9_pageno === response.f9s_page_total) {
+                    $('#next_f9').addClass('block-click');
+                }
+                $('#text-page_f9').text(f9_pageno + ' / ' + response.f9s_page_total);
+                if (response.status === true) return Render9(response.f9sData);
+            }
+        });
+    });
+
+    $('#previous_f9').click(function (e) {
+        e.preventDefault();
+        $('#next_f9').removeClass('block-click');
+        f9_pageno -= 1;
+        if(f9_pageno < 1) return f9_pageno = 1;
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/admin/listF1",
+            data: {
+                typeid: "1",
+                pageno: f9_pageno,
+                limit: f9_limit,
+                selectedDate: selectedDate9,
+                language: "vi",
+                phone: phone9
+            },
+            dataType: "json",
+            success: function (response) {
+                $('#text-page_f9').text(f9_pageno + ' / ' + response.f9s_page_total);
+                if (response.status === true) return Render9(response.f9sData);
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
