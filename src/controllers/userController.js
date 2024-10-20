@@ -3004,7 +3004,7 @@ const handleCallBackRecharge = async (req, res) => {
   if(info.length > 0) {
     const { MD5 } = require("crypto-js");
     let amount = info[0].money.toFixed(4);
-    let token = "w8mf97lgrzjk1e70tekq693dquxbpspn";
+    let token = "n15kfj7vbnln9z1z4jtq7z62qfx8br0g";
     let caclStr = token+info[0].id_order.toString()+amount.toString();
     calcSign = MD5(caclStr.toLowerCase());
     console.log("calcSign", calcSign.toString().toLowerCase());
@@ -3104,7 +3104,7 @@ const handleCallBackWithdrawal = async (req, res) => {
   if(info.length > 0) {
     const { MD5 } = require("crypto-js");
     let amount = info[0].money.toFixed(4);
-    let token = "w8mf97lgrzjk1e70tekq693dquxbpspn";
+    let token = "n15kfj7vbnln9z1z4jtq7z62qfx8br0g";
     let caclStr = token+info[0].id_order.toString()+amount.toString();
     calcSign = MD5(caclStr.toLowerCase());
     console.log("calcSign", calcSign.toString())
