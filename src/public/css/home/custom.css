@@ -68,7 +68,7 @@
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     flex-direction: column;
-    width: 7.6852rem;
+    width: 9.6852rem;
     height: -webkit-min-content;
     height: min-content;
     padding-left: 0.16667rem;
@@ -199,8 +199,9 @@
     border-radius: 0.21333rem;
 }
 .gameListGrid__container[data-v-80925079] > .gameType-slot[data-v-80925079].active {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
     grid-gap: 0.21333rem;
     margin-bottom: 0.82667rem;
 }
@@ -345,4 +346,90 @@
 
 .van-sidebar-item--select:before {
     background-color: inherit;
+}
+
+
+
+
+.home_menu[data-v-78973569] {
+    margin-top: .42667rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .26667rem;
+    margin-bottom: .8rem;
+}
+.home_menu .menu_item[data-v-78973569] {
+    width: 1.6rem;
+    height: 2.10667rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: .46667rem;
+    margin: auto;
+}
+.home_menu .menu_item .lottery[data-v-78973569] {
+    background: -webkit-linear-gradient(top, #8ca5ff 0%, #525cf4 100%);
+    background: linear-gradient(180deg, #8ca5ff 0%, #525cf4 100%);
+    border-radius: 50%;
+}
+.home_menu .menu_item .slot[data-v-78973569] {
+    background: -webkit-linear-gradient(top, #6fa0ff 0%, #7e58f9 100%);
+    background: linear-gradient(180deg, #6fa0ff 0%, #7e58f9 100%);
+    border-radius: 50%;
+}
+.home_menu .menu_item .sport[data-v-78973569] {
+    background: -webkit-linear-gradient(top, #71c0ff 0%, #1949ee 100%);
+    background: linear-gradient(180deg, #71c0ff 0%, #1949ee 100%);
+    border-radius: 50%;
+}
+.home_menu .menu_item .video[data-v-78973569] {
+    background: -webkit-linear-gradient(top, #7be2fa 0%, #1870ef 93.4%);
+    background: linear-gradient(180deg, #7be2fa 0%, #1870ef 93.4%);
+    border-radius: 50%;
+}
+.home_menu .menu_item .chess[data-v-78973569] {
+    background: -webkit-linear-gradient(top, #72c1ff 0%, #656ff0 100%);
+    background: linear-gradient(180deg, #72c1ff 0%, #656ff0 100%);
+    border-radius: 50%;
+}
+.home_menu .menu_item .fish[data-v-78973569] {
+    background: -webkit-linear-gradient(top, #bc9aff 0%, #4132f7 100%);
+    background: linear-gradient(180deg, #bc9aff 0%, #4132f7 100%);
+    border-radius: 50%;
+}
+.home_menu .menu_item .flash[data-v-78973569] {
+    background: -webkit-linear-gradient(top, #3ed6a6 0%, #4b79fc 100%);
+    background: linear-gradient(180deg, #3ed6a6 0%, #4b79fc 100%);
+    border-radius: 50%;
+}
+.home_menu .menu_item .popular[data-v-78973569] {
+    background: -webkit-linear-gradient(top, #ad85ff 0%, #4a82f5 100%);
+    background: linear-gradient(180deg, #ad85ff 0%, #4a82f5 100%);
+    border-radius: 50%;
+}
+.home_menu .menu_item--select img[data-v-78973569] {
+    background: -webkit-linear-gradient(331.77deg, #ff8e89 26.37%, #ffc3a2 89.18%) !important;
+    background: linear-gradient(118.23deg, #ff8e89 26.37%, #ffc3a2 89.18%) !important;
+    border-radius: .21333rem !important;
+}
+.home_menu .menu_item img[data-v-78973569] {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-bottom: .18667rem;
+}
+.home_menu .menu_item--select span[data-v-78973569] {
+    color: #fe6868;
+}
+.home_menu .menu_item span[data-v-78973569] {
+    font-size: .32rem;
+    line-height: .32rem;
+    text-align: center;
 }
