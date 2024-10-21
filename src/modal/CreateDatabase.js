@@ -87,5 +87,5 @@ CreateWingo();
 Create5D();
 CreateK3();
 // Level();
-// NapRut();
-// Admin();
+NapRut();
+Admin();
