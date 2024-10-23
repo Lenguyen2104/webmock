@@ -656,15 +656,6 @@
               });
           });
 
-            $("#clipboard-element").on('click touchend', function() {
-                var clipboardText = $(this).attr("data-clipboard-text");
-                navigator.clipboard.writeText(clipboardText).then(function() {
-                    alert("Đã sao chép mã mời!");
-                }).catch(function(err) {
-                    console.error('Lỗi khi sao chép:', err);
-                });
-            });
-
           $("#napdau").text(response.info[0].napdau);
           $("#napdau1").text(response.info[0].napdau);
           $("#money").text(formatM(response.info[0].money));
